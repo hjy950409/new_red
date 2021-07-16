@@ -8,16 +8,19 @@
   <title>미니와 지은이의 우당탕탕 대모험</title>
 
   <!-- 제이쿼리 불러오기 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <!-- 테일윈드 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.4/tailwind.min.css%22%3E">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.4/tailwind.min.css">
 
   <!-- 폰트어썸 -->
-  <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css%22%3E">
+  <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <!-- 공통 CSS -->
   <link rel="stylesheet" href="common.css">
+  <!-- index CSS -->
+  <link rel="stylesheet" href="index.css">
+
 
   <!-- 공통 JS -->
   <script src="common.js"></script>
@@ -28,46 +31,75 @@
 </head>
 
 <body>
-<!-- Slider main container -->
-<div class="swiper-container">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
-    <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
-    <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
-    <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
-    <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
-    <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
-    <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
-    ...
+  <div class="site-wrap">
+
+    <header class="top-bar bg-red-300 h-16">
+      <div class="container mx-auto h-full flex">
+
+        <a href="./" class="logo flex items-center px-4">
+          로고
+        </a>
+
+        <div class="flex-grow"></div>
+
+        <nav class="top-bar__menu-box">
+          <ul class="flex h-full">
+            <li><a href="#" class="flex h-full items-center px-6">민</a></li>
+            <li><a href="#" class="flex h-full items-center px-6">희</a></li>
+            <li><a href="#" class="flex h-full items-center px-6">지</a></li>
+            <li><a href="#" class="flex h-full items-center px-6">은</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/random" alt="#"></div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <script>
+        const swiper = new Swiper('.swiper-container', {
+          // Optional parameters
+
+          loop: true,
+
+          // If we need pagination
+
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          // And if we need scrollbar
+
+        });
+      </script>
+    </div>
+
+
+
+
+
   </div>
-  <!-- If we need pagination -->
-
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-<script>
-  const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    
-    loop: true,
-  
-    // If we need pagination
-    
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-  
-  });
-</script>
-</div>
 </body>
 
-</html> 
+</html>
